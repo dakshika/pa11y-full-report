@@ -45,6 +45,7 @@
 
     <!-- Page Content  -->
     <div id="content">
+        <div id="loader"></div>
         <div class="ajax-content"></div>
     </div>
 
@@ -60,8 +61,11 @@
 <script type="text/javascript">
     $(document).ready(function () {
 
-        $firstLink = $('#sidebar ul li a:first-child').attr('href');
-        $(".ajax-content").load($firstLink);
+        $firstLink = $('#sidebar ul li a:first-child');
+
+        $(".ajax-content").load($firstLink.attr('href'), function() {
+            $('#loader').hide();
+        });
 
         $("#sidebar").mCustomScrollbar({
             theme: "minimal"
@@ -86,7 +90,10 @@
 
     $(document).on("click", '#sidebar ul li a', function (event) {
         event.preventDefault();
-        $(".ajax-content").load(event.target.href);
+        $('#loader').show();
+        $(".ajax-content").load(event.target.href, function() {
+            $('#loader').hide();
+        });
     });
 </script>
 </body>
