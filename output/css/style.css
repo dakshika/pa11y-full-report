@@ -186,6 +186,102 @@ a.article:hover {
 .panel-danger>.panel-heading  { background-color: #E74C3C; border-color: #E74C3C; color: #fff }
 .panel-warning>.panel-heading { background-color: #F39C12; border-color: #F39C12; color: #fff}
 .panel-primary>.panel-heading { background-color: #2C3E50; border-color: #2C3E50; color: #fff}
+
+h1{
+    font-weight: 200;
+}
+
+@-webkit-keyframes loader-before {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    50% {
+        left: 25%;
+        width: 75%;
+    }
+    75% {
+        left: 100%;
+        width: 0;
+    }
+}
+@keyframes loader-before {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    50% {
+        left: 25%;
+        width: 75%;
+    }
+    75% {
+        left: 100%;
+        width: 0;
+    }
+}
+@-webkit-keyframes loader-after {
+    0%,
+    50% {
+        left: 0;
+        width: 0;
+    }
+    75% {
+        left: 0;
+        width: 25%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+@keyframes loader-after {
+    0%,
+    50% {
+        left: 0;
+        width: 0;
+    }
+    75% {
+        left: 0;
+        width: 25%;
+    }
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+#loader {
+    display: block;
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), linear-gradient(to right, #3F51B5, #3F51B5);
+}
+#loader:after,
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #3F51B5;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+#loader:before {
+    left: 0;
+    -webkit-animation-name: loader-before;
+    animation-name: loader-before;
+}
+#loader:after {
+    right: 0;
+    -webkit-animation-name: loader-after;
+    animation-name: loader-after;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

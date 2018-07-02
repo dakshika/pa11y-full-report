@@ -18,7 +18,7 @@ async function runExample() {
            const result = await pa11y(jsonContent[jsonURL].pageURL, {
                 "includeNotices": true,
                 "includeWarnings": true,
-                "standard": "WCAG2AA",
+                "standard": "Section508",
                 "screenCapture" : `${__dirname}` + "/output/captures/"+jsonContent[jsonURL].taskNo+".png",
                 "chromeLaunchConfig": {
                     "ignoreHTTPSErrors": true,
