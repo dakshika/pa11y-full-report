@@ -1,0 +1,45 @@
+[
+    {
+        "taskNo": 1,
+        "description": "APIM Store page",
+        "pageURL": "https://localhost:9443/store/"
+    },
+    {
+        "taskNo": 2,
+        "description": "APIM Forum Page",
+        "pageURL": "https://localhost:9443/store/forum"
+    },
+    {
+        "taskNo": 3,
+        "description": "APIM Login Page",
+        "pageURL": "https://localhost:9443/store/site/pages/login.jag"
+    },
+    {
+        "taskNo": 4,
+        "description": "APIM Store Page - Logged in view",
+        "pageURL": "https://localhost:9443/store/site/pages/login.jag",
+        "actions" : [
+            "set field #username to admin",
+            "set field #password to admin",
+            "click element #loginBtn",
+            "wait for url to be https://localhost:9443/store/"
+        ]
+    },
+    {
+        "taskNo": 5,
+        "description": "",
+        "pageURL" : "https://localhost:9443/store/site/pages/login.jag",
+        "actions" : [
+            "set field #username to admin",
+            "set field #password to admin",
+            "click element #loginBtn",
+            "wait for url to be https://localhost:9443/store/",
+            "navigate to https://localhost:9443/store/site/pages/applications.jag"
+        ]
+    },
+    {
+        "taskNo": 6,
+        "description": "PizzaShack",
+        "pageURL": "https://localhost:9443/store/apis/info?name=PizzaShackAPI&version=1.0.0&provider=admin"
+    }
+]
