@@ -1,0 +1,48 @@
+<div class="sidebar-button">
+    <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left"></i>
+    </button>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <h1><i>Accessibility Report For</i> "{{documentTitle}}"</h1>
+    </div>
+</nav>
+
+<div class="container-fluid" role="main">
+    <div class="bg-light">
+        <div class="row">
+            <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+            <span id="buttons">
+				<button class="btn btn-lg btn-danger">Errors <span class="badge">{{errorCount}}</span></button>
+				<button class="btn btn-lg btn-warning">Warnings <span class="badge">{{warningCount}}</span></button>
+				<button class="btn btn-lg btn-primary">Notices <span class="badge">{{noticeCount}}</span></button>
+			</span>
+            </div>
+            <p><strong>Page URL:</strong> {{pageUrl}} <br/>
+                <strong>Description: </strong> {{description}}<br/>
+                <strong>Generated at:</strong> {{date}}</p>
+            <div class="image-capture">
+                <img src="captures/{{imageURL}}" alt="{{pageUrl}}">
+            </div>
+        </div>
+    </div>
+
+    {{#issues}}
+    <div class="row">
+        <div class="panel panel-{{panelColor}}">
+            <div class="panel-heading">{{code}}</div>
+            <div class="panel-body">
+                <strong class="text-capitalize">{{typeLabel}}:</strong> {{message}}<br/><br/>
+                <pre>{{context}}</pre>
+            </div>
+            <div class="panel-footer text-sm">
+                <h4>
+                    <small>{{selector}}</small>
+                </h4>
+            </div>
+        </div>
+    </div>
+    {{/issues}}
+</div>
+
