@@ -1,0 +1,25 @@
+{
+  "bundleDependencies": false,
+  "dependencies": {
+    "hogan.js": "^3.0.2"
+  },
+  "deprecated": false,
+  "description": "An HTML reporter for Pa11y",
+  "engines": {
+    "node": ">=8"
+  },
+  "homepage": "https://github.com/dakshika/pa11y-full-report",
+  "keywords": [
+    "html",
+    "pa11y",
+    "reporter"
+  ],
+  "license": "LGPL-3.0",
+  "main": "./lib/reporter.js",
+  "name": "pa11y-reporter-html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakshika/pa11y-full-report.git"
+  },
+  "version": "1.0.0"
+}
