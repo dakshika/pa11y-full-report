@@ -62,7 +62,7 @@
     $(document).ready(function () {
 
         $firstLink = $('#sidebar ul li a:first-child');
-
+        $('#sidebar ul li').first().addClass('active');
         $(".ajax-content").load($firstLink.attr('href'), function() {
             $('#loader').hide();
         });
@@ -91,6 +91,8 @@
     $(document).on("click", '#sidebar ul li a', function (event) {
         event.preventDefault();
         $('#loader').show();
+        $('#sidebar ul li').removeClass('active');
+        $(this).closest('li').addClass('active');
         $(".ajax-content").load(event.target.href, function() {
             $('#loader').hide();
         });
