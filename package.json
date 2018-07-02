@@ -1,0 +1,33 @@
+{
+  "name": "pa11y-full-report",
+  "version": "1.0.0",
+  "description": "Report generator for pa11y",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakshika/pa11y-full-report.git"
+  },
+  "keywords": [
+    "pa11y",
+    "automated",
+    "accessibility",
+    "accessibility",
+    "section",
+    "508",
+    "WCAG"
+  ],
+  "dependencies": {
+    "puppeteer": "^1.5.0",
+    "pa11y": "^5.0.4",
+    "pa11y-reporter-html": "^1.0.0",
+  },
+  "author": "Dakshika Jayathilaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dakshika/pa11y-full-report/issues"
+  },
+  "homepage": "https://github.com/dakshika/pa11y-full-report#readme"
+}
