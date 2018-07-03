@@ -1,21 +1,54 @@
 [
     {
-        "taskNo": 1,
+        "taskName": "Home",
         "description": "APIM Store page",
         "pageURL": "https://localhost:9443/store/"
     },
     {
-        "taskNo": 2,
+        "taskName": "Forum",
         "description": "APIM Forum Page",
         "pageURL": "https://localhost:9443/store/forum"
     },
     {
-        "taskNo": 3,
+        "taskName": "Signup",
+        "description": "Sign up Page",
+        "pageURL": "https://localhost:9443/store/site/pages/sign-up.jag"
+    },
+    {
+        "taskName": "Signup full",
+        "description": "Sign up Page full view",
+        "pageURL": "https://localhost:9443/store/site/pages/sign-up.jag",
+        "actions" : [
+            "click element .sign-up-additional"
+        ]
+    },
+    {
+        "taskName": "Privacy Policy",
+        "description": "Privacy Policy Page",
+        "pageURL": "https://localhost:9443/store/site/pages/policy-pages/privacy-policy.jag"
+    },
+    {
+        "taskName": "Cookie Policy",
+        "description": "Cookie Policy Page",
+        "pageURL": "https://localhost:9443/store/site/pages/policy-pages/cookie-policy.jag"
+    },
+    {
+        "taskName": "Signup submit",
+        "description": "Sign up Page after submit",
+        "pageURL": "https://localhost:9443/store/site/pages/sign-up.jag",
+        "actions" : [
+            "click element .sign-up-additional",
+            "click element .agreement-checkbox",
+            "click element #registrationSubmit"
+        ]
+    },
+    {
+        "taskName": "Login",
         "description": "APIM Login Page",
         "pageURL": "https://localhost:9443/store/site/pages/login.jag"
     },
     {
-        "taskNo": 4,
+        "taskName": "logged in default",
         "description": "APIM Store Page - Logged in view",
         "pageURL": "https://localhost:9443/store/site/pages/login.jag",
         "actions" : [
@@ -26,7 +59,7 @@
         ]
     },
     {
-        "taskNo": 5,
+        "taskName": "Applications",
         "description": "",
         "pageURL" : "https://localhost:9443/store/site/pages/login.jag",
         "actions" : [
@@ -38,7 +71,7 @@
         ]
     },
     {
-        "taskNo": 6,
+        "taskName": "API default",
         "description": "PizzaShack",
         "pageURL": "https://localhost:9443/store/apis/info?name=PizzaShackAPI&version=1.0.0&provider=admin"
     }
