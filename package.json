@@ -23,6 +23,7 @@
     "puppeteer": "^1.5.0",
     "pa11y": "^5.0.4",
     "pa11y-reporter-html": "^1.0.0",
+    "toml-js": "^0.0.8"
   },
   "author": "Dakshika Jayathilaka",
   "license": "ISC",
