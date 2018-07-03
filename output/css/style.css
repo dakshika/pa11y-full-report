@@ -187,8 +187,17 @@ a.article:hover {
 .panel-warning>.panel-heading { background-color: #F39C12; border-color: #F39C12; color: #fff}
 .panel-primary>.panel-heading { background-color: #2C3E50; border-color: #2C3E50; color: #fff}
 
-h1{
+h1, h4{
     font-weight: 200;
+}
+
+h4{
+    font-size: 15px;
+}
+
+h3{
+    color: #38478c;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 }
 
 @-webkit-keyframes loader-before {
