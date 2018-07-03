@@ -45,7 +45,10 @@ report.index = async results =>{
     const template = hogan.compile(templateString);
 
     return template.render({
-        htmlURLs: results
+        htmlURLs: results.htmlURLs,
+        standard: results.standard,
+        product: results.product,
+		version: results.version
     });
 };
 
