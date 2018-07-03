@@ -59,8 +59,20 @@
         ]
     },
     {
+        "taskName": "My Account",
+        "description": "APIM Store Page - Logged in - My Account",
+        "pageURL": "https://localhost:9443/store/site/pages/login.jag",
+        "actions" : [
+            "set field #username to admin",
+            "set field #password to admin",
+            "click element #loginBtn",
+            "wait for url to be https://localhost:9443/store/",
+            "navigate to https://localhost:9443/store/site/pages/user-info.jag"
+        ]
+    },
+    {
         "taskName": "Applications",
-        "description": "",
+        "description": "Aplication list",
         "pageURL" : "https://localhost:9443/store/site/pages/login.jag",
         "actions" : [
             "set field #username to admin",
@@ -69,6 +81,37 @@
             "wait for url to be https://localhost:9443/store/",
             "navigate to https://localhost:9443/store/site/pages/applications.jag"
         ]
+    },
+    {
+      "taskName": "Applications Default",
+      "description": "Default Application view",
+      "pageURL" : "https://localhost:9443/store/site/pages/login.jag",
+      "actions" : [
+        "set field #username to admin",
+        "set field #password to admin",
+        "click element #loginBtn",
+        "wait for url to be https://localhost:9443/store/",
+        "navigate to https://localhost:9443/store/site/pages/applications.jag",
+        "click element .padding-reduce-on-grid-view",
+        "wait for url to be https://localhost:9443/store/site/pages/application.jag?name=DefaultApplication&groupId="
+      ]
+    },
+    {
+      "taskName": "Applications - Production Keys",
+      "description": "Default Application view",
+      "pageURL" : "https://localhost:9443/store/site/pages/login.jag",
+      "actions" : [
+        "set field #username to admin",
+        "set field #password to admin",
+        "click element #loginBtn",
+        "wait for url to be https://localhost:9443/store/",
+        "navigate to https://localhost:9443/store/site/pages/applications.jag",
+        "click element .padding-reduce-on-grid-view",
+        "wait for url to be https://localhost:9443/store/site/pages/application.jag?name=DefaultApplication&groupId=",
+        "wait for element #details to be visible",
+        "click element #production-keys-tab",
+        "wait for element #production to be visible"
+      ]
     },
     {
         "taskName": "API default",
