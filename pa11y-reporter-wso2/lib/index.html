@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>Accessibility Report - {{product}} - {{version}}</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -33,11 +33,12 @@
     <!-- Sidebar  -->
     <nav id="sidebar">
         <div class="sidebar-header">
-            <h3>Accessibility Report</h3>
+            <h3>Accessibility Report : <i>{{standard}}</i> </h3>
+            <h4>Product: {{product}}</h4>
+            <h4>Version: {{version}}</h4>
         </div>
 
         <ul class="list-unstyled components">
-            <p>{{standard}}</p>
             {{{htmlURLs}}}
         </ul>
 
